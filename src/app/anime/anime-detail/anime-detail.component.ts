@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Anime } from '../anime';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-anime-detail',
@@ -15,5 +16,6 @@ export class AnimeDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Output() back = new EventEmitter<void>();
 
 }

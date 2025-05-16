@@ -17,6 +17,14 @@
         <dd class="caption">{{ animeDetail.total_episodes }}</dd>
         <hr />
 
+        <dt class="bold">Seasons</dt>
+        <dd>
+      <ul>
+      <li *ngFor="let season of animeDetail.seasons"> {{ season.name }} - {{ season.episodes }} episodios </li>
+      </ul>
+      </dd>
+        
+        <button class="btn btn-secondary" (click)= "back.emit()">Volver</button>
       </dl>
     </div>
     <div class="col-3">

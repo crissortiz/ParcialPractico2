@@ -18,7 +18,7 @@ export class AnimeService {
   }
 
   getAnime(id: string): Observable<Anime> {
-    return this.http.get<Anime[]>(this.apiUrl).pipe(
+    return this.http.get<Anime[]>(this.apiUrl + "/" + id).pipe(
       map((animes: Anime[]) => {
         //Complete con el código necesario para recorrer los animes y retornar el anime con el id buscado
         // pista: use un for tradicional con comparación de un id con un if
@@ -29,5 +29,6 @@ export class AnimeService {
       })
     );
   }
+
 
 }

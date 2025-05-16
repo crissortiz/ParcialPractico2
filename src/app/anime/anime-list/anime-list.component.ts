@@ -29,4 +29,14 @@ export class AnimeListComponent implements OnInit {
     this.getAnimes();
   }
 
+  getPromedio(): number {
+    if (!this.animes || this.animes.length == 0) return 0;
+    const total = this.animes.reduce((sum, anime) => sum + Number(anime.Rating), 0);
+    return total / this.animes.length;
+}
+  getCantidadSeason(): number {
+    if (!this.animes || this.animes.length == 0) return 0;
+    const total = this.animes.reduce((sum, anime) => sum + anime.seasons.length, 0);
+    return total / this.animes.length;
+  }
 }
