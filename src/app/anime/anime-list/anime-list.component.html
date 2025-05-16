@@ -11,7 +11,7 @@
         <img src={{anime.img}}  alt="anime image" width=50px>
         <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
         <!-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS -->
-        <p class="card-text"><b># seasons: </b>"{{getCantidadSeason() | number}}"</p>
+        <p class="card-text"><b># seasons: </b>"{{getCantidadSeason(anime) | number}}"</p>
         <a href="#" (click)="onSelected(anime)">More information</a>
         <hr>
    </div>

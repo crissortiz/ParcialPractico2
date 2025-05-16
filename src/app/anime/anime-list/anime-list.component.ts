@@ -34,9 +34,7 @@ export class AnimeListComponent implements OnInit {
     const total = this.animes.reduce((sum, anime) => sum + Number(anime.Rating), 0);
     return total / this.animes.length;
 }
-  getCantidadSeason(): number {
-    if (!this.animes || this.animes.length == 0) return 0;
-    const total = this.animes.reduce((sum, anime) => sum + anime.seasons.length, 0);
-    return total / this.animes.length;
-  }
+  getCantidadSeason(anime: Anime): number {
+  return anime.seasons ? anime.seasons.length : 0;
+}
 }
